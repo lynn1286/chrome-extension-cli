@@ -11,6 +11,7 @@ export default {
     file: 'dist/index.js',
     format: 'es',
     sourcemap: true,
+    banner: '#!/usr/bin/env node',
   },
   plugins: [
     alias({

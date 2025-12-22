@@ -15,17 +15,17 @@
 ### 全局安装
 
 ```bash
-npm install -g chrome-extension-cli
+npm install -g @lynn1286/chrome-extension-cli
 # 或
-yarn global add chrome-extension-cli
+yarn global add @lynn1286/chrome-extension-cli
 # 或
-pnpm add -g chrome-extension-cli
+pnpm add -g @lynn1286/chrome-extension-cli
 ```
 
 ### 使用 npx 直接运行
 
 ```bash
-npx chrome-extension-cli create my-extension
+npx @lynn1286/chrome-extension-cli create my-extension
 ```
 
 ## 使用方法
@@ -81,4 +81,4 @@ pnpm build
 
 ## 许可证
 
-MIT 
+MIT
