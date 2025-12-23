@@ -26,9 +26,14 @@ export async function processTemplate(targetDir: string, data: TemplateData): Pr
 
       // 替换变量
       content = content
+        // JSON 格式 (package.json)
         .replace(/"name": ".*?"/, `"name": "${data.projectName}"`)
         .replace(/"description": ".*?"/, `"description": "${data.projectDescription}"`)
         .replace(/"author": ".*?"/, `"author": "${data.author}"`)
+        // TypeScript 对象格式 (manifest.ts)
+        .replace(/name: '.*?'/, `name: '${data.projectName}'`)
+        .replace(/description: '.*?'/, `description: '${data.projectDescription}'`)
+        // 其他替换
         .replace(/# chrome-extension-mv3/g, `# ${data.projectName}`)
         .replace(/Chrome Extension MV3 Template/g, data.projectDescription);
 
