@@ -33,6 +33,8 @@ export async function processTemplate(targetDir: string, data: TemplateData): Pr
         // TypeScript 对象格式 (manifest.ts)
         .replace(/name: '.*?'/, `name: '${data.projectName}'`)
         .replace(/description: '.*?'/, `description: '${data.projectDescription}'`)
+        // HTML 格式 (index.html)
+        .replace(/<title>.*?<\/title>/, `<title>${data.projectName}</title>`)
         // 其他替换
         .replace(/# chrome-extension-mv3/g, `# ${data.projectName}`)
         .replace(/Chrome Extension MV3 Template/g, data.projectDescription);
